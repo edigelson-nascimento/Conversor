@@ -26,7 +26,7 @@ O Conversor de Moeda permite converter valores entre Bitcoin (BTC) e Real (BRL).
 ## Créditos
 ![Logo](./img/logo.png)
 
-&copy; 2022 - 2024 Edigelson Nascimento. Todos os direitos reservados. **Este site foi desenvolvido com ❤️ por Edigelson Nascimento**
+&copy; 2022 - Edigelson Nascimento. Todos os direitos reservados. **Este site foi desenvolvido com ❤️ por Edigelson Nascimento**
 
 ## Licença
 
@@ -36,4 +36,4 @@ Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](./LICE
 
 - Email: edigelsonnascimento@hotmail.com
 - LinkedIn: [Edigelson Nascimento](https://www.linkedin.com/in/edigelson-nascimento)
-- Portfólio: [edigelson-nascimento.github.io](https://edigelson-nascimento.github.io)
+- Portfólio: [edigelsondev.github.io](https://edigelsondev.github.io)
