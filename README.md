@@ -1,39 +1,55 @@
-# Conversor de Moeda
+# Conversor de Moedas BTC/BRL — v2.0.0
 
-Este é um projeto de conversão de moeda desenvolvido por Edigelson Nascimento.
+Uma aplicação web minimalista e responsiva para converter Bitcoin (BTC) em Real Brasileiro (BRL) utilizando cotações em tempo real.
 
-## Descrição
+## 📋 Descrição
 
-O Conversor de Moeda permite converter valores entre Bitcoin (BTC) e Real (BRL). A cotação do BTC utilizada é ilustrativa.
+Este projeto foi desenvolvido com foco em **design premium**, **acessibilidade** e **performance**. A aplicação consome a API pública da CoinGecko para obter o valor atualizado do Bitcoin a cada 30 segundos, oferecendo uma interface limpa, modo escuro automático e histórico de conversões persistente.
 
-## Funcionalidades
+### Funcionalidades Principais
 
-- **Converter**: Permite converter um valor inserido de BTC para BRL usando a cotação atual.
-- **Limpar**: Limpa o valor inserido nas caixas de entrada.
+*   **Cotação em Tempo Real:** Atualização automática a cada 30 segundos.
+*   **Conversão Precisa:** Suporte para até 8 casas decimais no input.
+*   **Histórico Local:** Salva as últimas 5 conversões no navegador (localStorage).
+*   **Modo Escuro (Dark Mode):** Alternância manual ou baseada na preferência do sistema.
+*   **Economia de Recursos:** O sistema pausa as requisições à API quando a aba não está visível.
+*   **Design Responsivo:** Layout adaptável para Mobile, Tablet e Desktop.
 
-## Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 
-- HTML
-- CSS
-- JavaScript
+*   **HTML5:** Estrutura semântica.
+*   **CSS3 (TailwindCSS):** Estilização utilitária via CDN.
+*   **JavaScript (Vanilla ES6+):** Lógica de negócios sem frameworks.
+*   **API CoinGecko:** Fonte de dados para a cotação.
+*   **Google Fonts:** Tipografia (Inter).
 
-## Como Usar
+## 📂 Estrutura de Arquivos
 
-1. Digite o valor em BTC na primeira caixa de texto.
-2. Clique no botão **Converter** para ver o valor correspondente em BRL na segunda caixa de texto.
-3. Utilize o botão **Limpar** para limpar os valores das caixas de texto.
+```
+/
+├── index.html       # Estrutura principal
+├── css/
+│   └── style.css    # Estilos complementares e animações
+├── js/
+│   └── script.js    # Lógica da aplicação
+└── README.md        # Documentação
+```
 
-## Créditos
-![Logo](./img/logo.png)
+## 🚀 Como Usar
 
-&copy; 2022 - Edigelson Nascimento. Todos os direitos reservados. **Este site foi desenvolvido com ❤️ por Edigelson Nascimento**
+Não é necessária nenhuma instalação complexa ou gerenciador de pacotes (npm/yarn), pois o projeto utiliza Tailwind via CDN.
 
-## Licença
+1.  **Baixe ou Clone** este repositório.
+2.  **Abra o arquivo** `index.html` diretamente em seu navegador.
+    *   *Opção recomendada:* Use uma extensão como "Live Server" no VS Code para simular um servidor local.
 
-Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+## 📝 Créditos e Licença
 
-## Contato
+*   **Desenvolvedor:** Edigelson Nascimento
+*   **Website:** [https://edigelson.pages.dev](https://edigelson.pages.dev)
+*   **Ano:** 2025
 
-- Email: edigelsonnascimento@hotmail.com
-- LinkedIn: [Edigelson Nascimento](https://www.linkedin.com/in/edigelson-nascimento)
-- Portfólio: [edigelsondev.github.io](https://edigelsondev.github.io)
+Este projeto é **Open Source** sob a licença **MIT**. Sinta-se livre para usar, estudar e modificar.
+
+---
+*© 2022 – 2025 • Edigelson Nascimento*
