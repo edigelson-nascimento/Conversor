@@ -1,34 +1,41 @@
-// IDs
-var inputValor = document.getElementById("caixamsg");
-var outputValor = document.getElementById("valor");
-var btcPriceSpan = document.getElementById("btcPrice");
+// Referências dos campos
+const inputValor = document.getElementById("caixamsg");
+const outputValor = document.getElementById("valor");
+const btcPriceSpan = document.getElementById("btcPrice");
 
 let precoBTC = null;
 
-// Buscar preço do BTC em tempo real
+// Função para buscar o preço do BTC em tempo real
 async function atualizarPrecoBTC() {
   try {
     const req = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=brl");
     const data = await req.json();
+
     precoBTC = data.bitcoin.brl;
 
-    // Atualiza o texto no HTML
-    btcPriceSpan.textContent = "R$ " + precoBTC.toLocaleString("pt-BR");
+    // Atualiza a cotação na tela
+    btcPriceSpan.textContent =
+      "R$ " +
+      precoBTC.toLocaleString("pt-BR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
 
   } catch (err) {
     btcPriceSpan.textContent = "Erro ao carregar";
-    console.log("Falha ao pegar preço:", err);
+    console.log("Erro ao pegar preço:", err);
   }
 }
 
-// Converte BTC → BRL usando o preço atualizado
+// Converter BTC → BRL
 function Converter() {
   if (!precoBTC) {
-    outputValor.value = "Aguarde a cotação carregar...";
+    outputValor.value = "Aguarde a cotação...";
     return;
   }
 
-  const valorDigitado = parseFloat(inputValor.value);
+  let valorDigitado = inputValor.value.replace(",", "."); // permite vírgula no input
+  valorDigitado = parseFloat(valorDigitado);
 
   if (isNaN(valorDigitado)) {
     outputValor.value = "Digite um valor válido";
@@ -36,18 +43,22 @@ function Converter() {
   }
 
   const total = valorDigitado * precoBTC;
-  outputValor.value = "R$ " + total.toLocaleString("pt-BR", {
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2
-});
 
-// Limpar
+  outputValor.value =
+    "R$ " +
+    total.toLocaleString("pt-BR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+}
+
+// Limpar campos
 function Limpar() {
   inputValor.value = "";
   outputValor.value = "";
 }
 
-// Atualiza a cotação assim que a página carregar
+// Ao carregar a página, busca a cotação
 atualizarPrecoBTC();
 
 // Atualiza a cada 30 segundos
