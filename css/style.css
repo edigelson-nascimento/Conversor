@@ -1,123 +1,68 @@
-* {
-   margin: 0;
-   padding: 0;
-   user-select: none;
- }
+/* 
+ * Arquivo de Estilos - Conversor de Moedas v2.0.0
+ * Complementa o TailwindCSS com ajustes finos e animações.
+ * Autor: Edigelson Nascimento
+ */
 
+/* Suavização de fonte geral */
 body {
-    background: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
- a {
-   text-decoration: none;
- }
- 
- h1 {
-   color: white;
-   text-align: center;
-   font-size: 30px;
-   font-family: 'Montserrat', sans-serif;
- }
- 
-h2, h3 {
-   color: white;
-   text-align: center;
-   position: relative;
-   top: 29px;
-   font-size: 18px;
-   font-family: 'Montserrat', sans-serif;
- }
- 
-h4 {
-  color: white;
-  text-align: center;
-  position: relative;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-input, input:focus, input:focus, select :focus {
-  outline: 0;
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  border:none;
-  background: black;
-  font-size: 30px;
-  color: white;
-  border-radius: 2px;
-  resize: none;
-}
-
-#botao, #limpar {
-  width: 220px;
-  height: 60px;
-  margin-top: 4px;
-  border: none;
-  border-radius: 3px;
-  font-family: 'Montserrat', sans-serif; 
-  font-size: 20px; 
-  text-align: center;
-}
-
-ul {
-  margin: 0 auto;
-  display: inline-block;
-  list-style: none;
-}
- 
-li {
-  float: left;
-  margin: 0 3px;
-}
- 
-.badge {
-  margin-top: 100px;
-  flex-grow: 100vh;
-}
- .conteiner {
-   display:flex;
-   flex-direction: column;
-   min-height: 66vh;
- }
-   .caixa {
-     width: 100px;
-     height: 20px;
-     margin-top: 90px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-   }
- 
- @media screen and (max-width: 480px) {
-    
-   #botao, #limpar {
-      width: 300px;
-      height: 60px;
-      margin-top: 4px;
-      border: none;
-      border-radius: 3px;
-      font-family: 'Montserrat', sans-serif; 
-      font-size: 20px; 
-      text-align: center;
-      list-style: none;
+/* Animação suave para entrada de elementos (ex: resultado da conversão) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
     }
-   
-    h2, h3 {
-      color: white;
-      text-align: center;
-      position: relative;
-      font-size: 14px;
-      font-family: 'Montserrat', sans-serif;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
- 
-    h4 {
-      color: white;
-      text-align: center;
-      position: relative;
-      font-size: 12px;
-      font-family: 'Montserrat', sans-serif;
-  }
-  
- }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Customização da barra de rolagem para o histórico */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; /* slate-300 */
+    border-radius: 20px;
+}
+
+/* Modo escuro para a barra de rolagem */
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #475569; /* slate-600 */
+}
+
+/* 
+ * Classe utilitária para efeito Glassmorphism (Vidro)
+ * Usada caso queira aplicar sobreposições futuras
+ */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.dark .glass {
+    background: rgba(15, 23, 42, 0.7); /* Slate 900 com opacidade */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Ajustes de acessibilidade para foco */
+:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
