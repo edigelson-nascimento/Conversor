@@ -36,8 +36,10 @@ function Converter() {
   }
 
   const total = valorDigitado * precoBTC;
-  outputValor.value = "R$ " + total.toLocaleString("pt-BR");
-}
+  outputValor.value = "R$ " + total.toLocaleString("pt-BR", {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
 
 // Limpar
 function Limpar() {
