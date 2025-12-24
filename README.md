@@ -4,7 +4,7 @@ Uma aplicação web minimalista e responsiva para converter Bitcoin (BTC) em Rea
 
 ## 📋 Descrição
 
-Este projeto foi desenvolvido com foco em **design acessível**, **acessibilidade** e **performance**. A aplicação consome a API pública da CoinGecko para obter o valor atualizado do Bitcoin a cada 30 segundos, oferecendo uma interface limpa, modo escuro automático e histórico de conversões persistente.
+Este projeto foi desenvolvido com foco em **design minimalista**, **acessibilidade** e **performance**. A aplicação consome a API pública da CoinGecko para obter o valor atualizado do Bitcoin a cada 30 segundos, oferecendo uma interface limpa, modo escuro automático e histórico de conversões persistente.
 
 ### Funcionalidades Principais
 
