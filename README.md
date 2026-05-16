@@ -52,4 +52,4 @@ Não é necessária nenhuma instalação complexa ou gerenciador de pacotes (npm
 Este projeto é **Open Source** sob a licença **MIT**. Sinta-se livre para usar, estudar e modificar.
 
 ---
-*© 2022 – 2025 • Edigelson Nascimento*
+*© 2022 • Edigelson Nascimento*
